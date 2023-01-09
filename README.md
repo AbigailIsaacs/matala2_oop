@@ -1,4 +1,5 @@
 # matala2_oop
+part1-
 This Java class contains four methods.
 The first method, "createTextFiles" , creates a specified number of text files, with random numbers of lines in each file.
 The second method, "getNumOfLines", reads through a list of text files and returns the total number of lines in all of the files.
@@ -18,7 +19,8 @@ Worst preformer - The getNumOfLines method reads through the files one by one, s
 Better preformer - The getNumOfLinesThreads method reads through the files concurrently using multiple threads. This means that it will be able to count the lines in the files faster than the getNumOfLines method, especially as the number of files increases. The running time of this method is not necessarily directly proportional to the number of files, because it depends on the number of threads being used and the speed at which the threads can process the files.
 
 Best preformer - The getNumOfLinesThreadPool method also reads through the files concurrently, but it uses a thread pool to manage the threads. This means that it can potentially count the lines in the files faster than the getNumOfLinesThreads method, especially as the number of files increases. The running time of this method is not necessarily directly proportional to the number of files, because it depends on the size of the thread pool and the speed at which the threads can process the files.
-
+part2-
+In javadoc in thr code
 
 
 
