@@ -1,3 +1,7 @@
+package part2;
+
+import part2.Task;
+
 import java.util.concurrent.*;
 public class CustomExecutor extends ThreadPoolExecutor{
 
@@ -61,7 +65,7 @@ public class CustomExecutor extends ThreadPoolExecutor{
      * @return
      * @param <T>
      */
-    public <T> Future<T> submit( Callable<T> operation,TaskType taskType) {
+    public <T> Future<T> submit(Callable<T> operation, TaskType taskType) {
         Task<T> task = Task.createTask(operation,taskType);
 
         return submit(task);

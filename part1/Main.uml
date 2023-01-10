@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Main</OriginalElement>
+  <nodes>
+    <node x="42.5" y="740.0">FileLineThread</node>
+    <node x="209.25000000000006" y="866.0">Ex2_1</node>
+    <node x="320.0" y="751.0">NumLineTask</node>
+    <node x="60.50000000000003" y="-15.0">java.lang.Runnable</node>
+    <node x="323.0" y="362.5">java.util.concurrent.Callable</node>
+    <node x="-72.0" y="64.0">java.lang.Thread</node>
+    <node x="211.25000000000006" y="945.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Ex2_1" target="FileLineThread" relationship="CREATE">
+      <point x="0.0" y="-14.5" />
+      <point x="252.25000000000006" y="841.0" />
+      <point x="115.5" y="841.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Main" target="Ex2_1" relationship="CREATE">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="java.lang.Thread" target="java.lang.Runnable" relationship="REALIZATION">
+      <point x="2.8421709430404007E-14" y="-313.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="FileLineThread" target="java.lang.Thread" relationship="GENERALIZATION">
+      <point x="0.0" y="-38.0" />
+      <point x="0.0" y="313.0" />
+    </edge>
+    <edge source="NumLineTask" target="java.util.concurrent.Callable" relationship="REALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Ex2_1" target="NumLineTask" relationship="CREATE">
+      <point x="0.0" y="-14.5" />
+      <point x="252.25000000000006" y="841.0" />
+      <point x="389.0" y="841.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.38057482656095143" showDependencies="true" x="203.00000000000023" y="489.50000000000006" />
+  <SelectedNodes>
+    <node>Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

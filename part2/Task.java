@@ -1,9 +1,10 @@
+package part2;
+
 import java.util.concurrent.Callable;
 
-public class Task<T>   implements  Callable<T>{
+public class Task<T>   implements  Callable<T> ,Comparable<Task<T>>{
     private final TaskType taskType;
     private final Callable<T> task;
-    public static int upDate =0;
 
     private Task(Callable<T> task, TaskType priority) {
         this.task = task;
@@ -42,7 +43,6 @@ public class Task<T>   implements  Callable<T>{
      */
     @Override
     public T call() throws Exception {
-        upDate = 1;
         return task.call();
     }
 
@@ -64,7 +64,12 @@ public class Task<T>   implements  Callable<T>{
     }
 
     public String toString(){
-        return "TaskType: "+ taskType+ "task: "+task.toString();
+        return "part2.Task.TaskType: "+ taskType+ "task: "+task.toString();
     }
 
+
+    @Override
+    public int compareTo(Task<T> other) {
+        return Integer.compare(this.getTaskType().getPriorityValue(),other.getTaskType().getPriorityValue());
+    }
 }
